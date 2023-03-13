@@ -1,8 +1,8 @@
 #AWS ID KEY
 provider "aws" {
-  region     = "us-east-1"
-  access_key = "AKIARRO7EUIOW3CJEYJG"
-  secret_key = "1ex5/+OtKXu8m4x0NWgdpMdJI9gcpEiGOlLexw/d"
+  region     = "region"
+  access_key = "your access key"
+  secret_key = "your secret key"
 }
 
 #VPC
@@ -106,7 +106,7 @@ resource "aws_route_table_association" "Public-asso" {
 #Key Pair
 resource "aws_key_pair" "Project-key" {
   key_name   = "Project-key"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCbkZ0xvXZhoK8zXo6sFRSRpNCh78XrzBx4ISq5NnSKDSWHe0tJDdlM3Ptoql8uBrm47O8K+mj376jq92pP+n2alNLJlEZ0hr+3pt/u+u7QpvKwUtMCFJ/QNftjdCrw6CbW1X+YA7Oc/cN3rsSqDogBK0p+XwvzSbeaVAfAVHGXCiJ5+t6j07dxKMDStIuV+hyPMWjkvKhcYNYIiTKwobFnb2w/EkBccEb/bciA5+MKyNISxt4BHXKrPHRK7Q9G1hiN+b4rTs/+w7qpZFpp65bU2SZuV9eL4lV391RVoIBJK6yVlNOwGVf/WxgjFW2Nqf5qV7YgCCFYo0xJCDXNW6Vx root@ip-172-31-51-171.ec2.internal"
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD3F6tyPEFEzV0LX3X8BsXdMsQz1x2cEikKDEY0aIj41qgxMCP/iteneqXSIFZBp5vizPvaoIR3Um9xK7PGoW8giupGn+EPuxIA4cDM4vzOqOkiMPhz5XK0whEjkVzTo4+S0puvDZuwIsdiW9mxhJc7tgBNL0cYlWSYVkz4G/fslNfRPW5mYAM49f4fhtxPb5ok4Q2Lg9dPKVHO/Bgeu5woMc7RY0p1ej6D4CKFE6lymSDJpW0YHX/wqE9+cfEauh7xZcG0q9t2ta6F6fmX0agvpFyZo8aFbXeUBr7osSCJNgvavWbM/06niWrOvYX2xwWdhXmXSrbX8ZbabVohBK41 email@example.com"
 }
 
 
@@ -180,5 +180,3 @@ resource "aws_route_table_association" "Private-assoc" {
   subnet_id      = aws_subnet.Private-sub.id
   route_table_id = aws_route_table.Private-rt.id
 }
-
-
